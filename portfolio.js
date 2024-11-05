@@ -11,9 +11,15 @@ export function calculatePortfolioValue(assets) {
 }
 
 // Create the total porfolio value as a variable
-const portfolioValue = calculatePortfolioValue();
+const portfolioValue = calculatePortfolioValue(assets);
 
 // Create a function to see what percentage each asset makes out of our total portfolio
 export function getPortfolioAllocation(assets) {
-    return assets.map(value => (value / portfolioValue) * 100);
-};
+    return assets.map(asset => {
+        const percentage = ((asset.price * asset.quantity) / portfolioValue) * 100;
+        return {
+            name: asset.name,
+            allocation: Number(percentage.toFixed(1))
+        };
+    });  
+}

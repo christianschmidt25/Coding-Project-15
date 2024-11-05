@@ -10,8 +10,6 @@ class Transaction {
         this.type = type;
         this.quantity = quantity;
         this.assets = getAssetById(id);
-
-        this.completeTransaction();
     }
 
     // Creates the function allowing user to complete a transaction
