@@ -1,7 +1,7 @@
 // Task 3: Create transaction module with Transaction class
 
 // Imports assets and getAssetByID from the asset JavaScript file
-import { assets, getAssetById } from '/.asset.js';
+import { assets, getAssetById } from './asset.js';
 
 // Create Transaction class
 class Transaction {
