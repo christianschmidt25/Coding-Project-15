@@ -1,6 +1,6 @@
 // Task 2: Create portfolio module with calculatePortfolioValue and getPortfolioAllocation functions.
 
-// Import the assets and getAssetById from asset.js file
+// Import the assets array from asset.js file
 import { assets } from '/.asset.js';
 
 // Create a function to calculate the portfolio value by multiplying all of the asset prices and quantities and adding them up after 
