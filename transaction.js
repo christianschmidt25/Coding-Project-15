@@ -29,4 +29,5 @@ class Transaction {
     }
 }
 
+// Allow for Transaction  class to be imported into other JavaScript files
 export default Transaction;
