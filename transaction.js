@@ -9,7 +9,7 @@ class Transaction {
         this.id = id;
         this.type = type;
         this.quantity = quantity;
-        this.asset = getAssetById(id);
+        this.assets = getAssetById(id);
 
         this.completeTransaction();
     }
@@ -17,14 +17,16 @@ class Transaction {
     // Creates the function allowing user to complete a transaction
     completeTransaction() {
         if (this.type === 'sell') {
-            if (this.quantity > this.asset.quantity) {
-                throw new Error (`Insufficient quantity for sale of ${this.asset.name}.`);
+            if (this.quantity > this.assets.quantity) {
+                throw new Error (`Insufficient quantity for sale of ${this.assets.name}.`);
             }
-            this.asset.quantity -= this.quantity;
+            this.assets.quantity -= this.quantity;
         } else if (this.type === 'buy') {
-            this.asset.quantity += this.quantity;
+            this.assets.quantity += this.quantity;
         } else {
             throw new Error ('Invalid transaction type. Please type buy or sell.');
         }
     }
 }
+
+export default Transaction;
