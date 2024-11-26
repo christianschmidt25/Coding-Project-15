@@ -1,2 +1,2 @@
-# Coding-Project-15
-This is the repository for the Coding Project 15 assignment for ISM 3232. I will be creating separate JavaScript files to make it easier to track as the portfolio grows.
+# Financial Portfolio Management System
+This is a financial portfolio management system application. I will be creating separate JavaScript files to make it easier to track as the portfolio grows, creating different modules to keep track of assets and transactions.
